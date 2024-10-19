@@ -7,18 +7,18 @@ Por ejemplo, la salida de [0,0,1,1,0] sería:
 
 ['Yahoo','Yahoo', 1, 1,'Yahoo'] */
 
-let myArray2 = [ 1, 0, 0, 0, 1, 0, 0, 0, 1, 1 ];
+let myArray = [ 1, 0, 0, 0, 1, 0, 0, 0, 1, 1 ];
 
-const myFunction = (arr) => {
-    let arrayNew = [];
-    arr.forEach((item) => {
-        if (item == 1){
-            arrayNew.push(item);
+
+const zerosToYahoo = (arr) => {
+    let newArray = [];
+    arr.forEach((item) =>{ 
+        if (item === 1){
+            newArray.push(item);
         }else{
-            arrayNew.push("Yahoo");
+            newArray.push("Yahoo");
         }
     });
-    return arrayNew;
+    return newArray
 }
-
-console.log(myFunction(myArray2))
+console.log(zerosToYahoo(myArray));
